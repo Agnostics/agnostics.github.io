@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="twitch">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twitch Favorites | Track your favorite streams!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="container" ng-controller="body">
+  <h1 class="title">TWITCH FAVORITES</h1>
+
+  <img alt="full screen background image" src="http://miketricking.github.io/dist/images/back3.jpg" id="full-screen-background-image" />
+
+  <div class="row">
+    <div class="col-sm-pull-4" ng-repeat="user in allUsers">
+      <div class=" bx hovereffect">
+        <img class="img-responsive " ng-src="{{user.logo}}" alt="">
+        <div class="overlay">
+          <h2>{{user.name}}</h2>
+          <a class="info" ng-href="https://twitch.tv/{{user.name}}">Watch Now!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="hvr-grow">
+      <div class="glyphicon glyphicon-plus-sign "></div>
+      <div class="adjust">ADD</div>
+    </div>
+
+    <div class="hvr-grow">
+      <div class="glyphicon glyphicon-minus-sign "></div>
+      <div class="adjust">REMOVE</div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
