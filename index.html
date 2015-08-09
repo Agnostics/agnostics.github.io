@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href="css/style.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body class="container" ng-controller="body">
@@ -19,17 +18,40 @@
 
   <div class="row">
     <div class="col-sm-pull-4" ng-repeat="user in allUsers">
-      <div class=" bx hovereffect">
-        <img class="img-responsive " ng-src="{{user.logo}}" alt="">
-        <div class="overlay">
-          <h2>{{user.name}}</h2>
-          <a class="info" ng-href="https://twitch.tv/{{user.name}}">Watch Now!</a>
+      <a data-toggle="modal" data-target="#twitch-modal-{{this.user.name}}">
+        <div class=" bx hovereffect">
+          <img class="img-responsive " ng-src="{{user.logo}}" alt="">
+          <div class="overlay">
+            <h2>{{user.name}}</h2>
+            <a class="info" ng-href="https://twitch.tv/{{user.name}}">Watch Now!</a>
+          </div>
+        </div>
+      </a>
+
+
+      <div class="modal fade" id="twitch-modal-{{this.user.name}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title">{{user.name}}</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+          </div>
         </div>
       </div>
+
+
+
     </div>
   </div>
 
-  <div class="bottom">
+
+  <!-- <div class="bottom">
     <div class="hvr-grow">
       <div class="glyphicon glyphicon-plus-sign "></div>
       <div class="adjust">ADD</div>
@@ -39,7 +61,7 @@
       <div class="glyphicon glyphicon-minus-sign "></div>
       <div class="adjust">REMOVE</div>
     </div>
-  </div>
+  </div> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
