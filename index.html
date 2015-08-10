@@ -18,7 +18,7 @@
 
   <div class="row">
     <div class="col-sm-pull-4 " ng-repeat="user in allUsers">
-      <a data-toggle="modal" data-target="#twitch-modal-{{this.user.name}}">
+      <a ng-href="https://twitch.tv/{{user.name}}">
         <div class="bx hovereffect">
 
           <div class="image">
@@ -26,9 +26,12 @@
             <h2 class="image-text" ng-show="user.online">Online</h2>
           </div>
 
+          <!-- <a class="info" ng-href="https://twitch.tv/{{user.name}}">More Info!</a> -->
+
+
           <div class="overlay">
             <h2>{{user.name}}</h2>
-            <a class="info" ng-href="https://twitch.tv/{{user.name}}">Watch Now!</a>
+            <a class="info" data-toggle="modal" data-target="#twitch-modal-{{this.user.name}}">More Info!</a>
           </div>
         </div>
       </a>
