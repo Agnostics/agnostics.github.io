@@ -17,10 +17,15 @@
   <img alt="full screen background image" src="http://miketricking.github.io/dist/images/back3.jpg" id="full-screen-background-image" />
 
   <div class="row">
-    <div class="col-sm-pull-4" ng-repeat="user in allUsers">
+    <div class="col-sm-pull-4 " ng-repeat="user in allUsers">
       <a data-toggle="modal" data-target="#twitch-modal-{{this.user.name}}">
-        <div class=" bx hovereffect">
-          <img class="img-responsive " ng-src="{{user.logo}}" alt="">
+        <div class="bx hovereffect">
+
+          <div class="image">
+            <img class="img-responsive" ng-src="{{user.logo}}" alt="">
+            <h2 class="image-text" ng-show="user.online">Online</h2>
+          </div>
+
           <div class="overlay">
             <h2>{{user.name}}</h2>
             <a class="info" ng-href="https://twitch.tv/{{user.name}}">Watch Now!</a>
@@ -36,10 +41,27 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-              <h4 class="modal-title">{{user.name}}</h4>
+              <h4 class="modal-title">{{user.name}}
+                <span class="glyphicon glyphicon-flash" aria-hidden="true" ng-show="user.online"></span>
+
+                <span ng-hide="user.online" class="glyphicon glyphicon-flash black" aria-hidden="true"></span>
+
+              </h4>
+              <p class="stats">
+                <span data-toggle="tooltip" data-placement="top" title="Followers">
+                  <span class="glyphicon glyphicon-heart"> </span> {{user.followers | number}} &emsp;
+                </span>
+                <span data-toggle="tooltip" data-placement="top" title="Total Views">
+                  <span class="glyphicon glyphicon-eye-open"> </span> {{user.views | number}}
+                </span>
+              </p>
+
+
             </div>
             <div class="modal-body">
-              ...
+              <blockquote>
+                <p>{{user.bio}}</p>
+              </blockquote>
             </div>
           </div>
         </div>
