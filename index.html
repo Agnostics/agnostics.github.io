@@ -11,13 +11,31 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
 </head>
 
+<img alt="full screen background image" src="http://miketricking.github.io/dist/images/back3.jpg" id="full-screen-background-image" />
+
 <body class="container" ng-controller="body">
+
   <h1 class="title">TWITCH FAVORITES</h1>
 
-  <img alt="full screen background image" src="http://miketricking.github.io/dist/images/back3.jpg" id="full-screen-background-image" />
+  <div class="bar">
+    <form class="search-container">
+      <input id="search-box" type="text" class="search-box" name="q" ng-model="query" />
+      <label for="search-box">
+        <span class="glyphicon glyphicon-search search-icon"></span>
+      </label>
+
+      <label for="filter-icon">
+        <span class="glyphicon glyphicon-option-horizontal filter-icon"></span>
+      </label>
+
+    </form>
+
+  </div>
+
+  <!-- <input ng-model="query" placeholder="Twitch Name"> -->
 
   <div class="row">
-    <div class="col-sm-pull-4 " ng-repeat="user in allUsers">
+    <div class="col-sm-pull-4 " ng-repeat="user in userDisplay | filter:query">
       <a ng-href="https://twitch.tv/{{user.name}}">
         <div class="bx hovereffect">
 
@@ -28,14 +46,12 @@
 
           <!-- <a class="info" ng-href="https://twitch.tv/{{user.name}}">More Info!</a> -->
 
-
           <div class="overlay">
             <h2>{{user.name}}</h2>
             <a class="info" data-toggle="modal" data-target="#twitch-modal-{{this.user.name}}">More Info!</a>
           </div>
         </div>
       </a>
-
 
       <div class="modal fade" id="twitch-modal-{{this.user.name}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -59,7 +75,6 @@
                 </span>
               </p>
 
-
             </div>
             <div class="modal-body">
               <blockquote>
@@ -70,23 +85,8 @@
         </div>
       </div>
 
-
-
     </div>
   </div>
-
-
-  <!-- <div class="bottom">
-    <div class="hvr-grow">
-      <div class="glyphicon glyphicon-plus-sign "></div>
-      <div class="adjust">ADD</div>
-    </div>
-
-    <div class="hvr-grow">
-      <div class="glyphicon glyphicon-minus-sign "></div>
-      <div class="adjust">REMOVE</div>
-    </div>
-  </div> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
