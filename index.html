@@ -15,26 +15,30 @@
 
 <body class="container" ng-controller="body">
 
-  <h1 class="title">TWITCH FAVORITES</h1>
+  <h1 class="title noselect">TWITCH FAVORITES</h1>
 
-  <div class="bar">
-    <form class="search-container">
-      <input id="search-box" type="text" class="search-box" name="q" ng-model="query" />
-      <label for="search-box">
-        <span class="glyphicon glyphicon-search search-icon"></span>
-      </label>
+  <form class="bar-container noselect">
+    <input id="search-box" type="text" class="search-box" ng-model="query" />
 
-      <label for="filter-icon">
+    <label for="search-box" title="Search">
+      <span class="glyphicon glyphicon-search search-icon"></span>
+    </label>
+
+    <!-- <button type="button" id="menu" name="button" data-toggle="dropdown"></button> -->
+    <div class="dropup">
+      <label for="menu" data-placement="right" data-toggle="dropdown" title="Filter">
         <span class="glyphicon glyphicon-option-horizontal filter-icon"></span>
       </label>
+      <ul class="dropdown-menu" aria-labelledby="menu">
+        <li><a href="#">All users</a></li>
+        <li><a href="#">Online users</a></li>
+        <li><a href="#">Offline users</a></li>
+      </ul>
+    </div>
 
-    </form>
+  </form>
 
-  </div>
-
-  <!-- <input ng-model="query" placeholder="Twitch Name"> -->
-
-  <div class="row">
+  <div class="row ">
     <div class="col-sm-pull-4 " ng-repeat="user in userDisplay | filter:query">
       <a ng-href="https://twitch.tv/{{user.name}}">
         <div class="bx hovereffect">

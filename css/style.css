@@ -228,10 +228,11 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
-  .bar {
+  .bar-container {
     text-align: right;
     padding-bottom: 5px;
     padding-right: 45px;
+    width: auto;
     /*display: inline-block;*/
     /*max-width: 752px;*/
   }
@@ -239,20 +240,17 @@
     transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
     width: 25px;
     height: 25px;
-    /*border-radius: 20px;*/
     border-color: white;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    /*background: rgb(235, 235, 235);*/
+    color: transparent;
   }
   .search-box:hover {
-    /*color: white;*/
-    /*background: rgb(200, 200, 200);*/
     box-shadow: 0 0 0 3px white;
   }
   .search-box:focus {
-    transition: width $0.6s cubic-bezier(0, 1.22, .66, 1.39), border-radius 0.6s, background 0.6s;
+    transition: width z0.6s cubic-bezier(0, 1.22, .66, 1.39), border-radius 0.6s, background 0.6s;
     border: thin solid white;
     outline: none;
     box-shadow: none;
@@ -260,13 +258,11 @@
     cursor: text;
     width: 300px;
     border-radius: auto;
-    /*background: rgb(235, 235, 235);*/
     color: white;
   }
   .search-icon {
     position: relative;
     left: -24px;
-    /*color: rgb(174, 74, 244);*/
     color: white;
     cursor: pointer;
   }
@@ -280,8 +276,30 @@
     position: relative;
     color: white;
     cursor: pointer;
-    /*background-color: white;*/
     padding: 5px;
-    /*border-radius: 20px;*/
     border: none;
   }
+  .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .dropdown, .dropup {
+    display: inline-flex;
+  }
+  /*.dropdown-menu {
+    position: inherit;
+    float: right;
+    background-color: transparent;
+    margin-bottom: -20px;
+    padding-bottom: 30px;
+    vertical-align: top;
+  }
+  .open>.dropdown-menu {
+    display: flex;
+    border: none;
+    box-shadow: none;
+  }*/
