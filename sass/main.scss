@@ -1,10 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600,500,700);
+$light-green: #85f2a7;
+$green: #6ac386;
 html {
     color      : #222;
     font-size  : 1em;
     line-height: 1.4;
 }
 body {
-    font  : 16px/26px Helvetica, Helvetica Neue, Arial;
+    font  : 16px/26px Poppins;
     margin: 0;
 }
 .header-container {
@@ -12,6 +15,63 @@ body {
     background-size: cover;
     min-height     : 100vh;
     max-height     : 100%;
+    nav {
+        color         : #eee;
+        letter-spacing: 3px;
+        float         : right;
+        margin        : 2% 10% 0 0;
+        display       : inline-flex;
+        div {
+            margin: 10px;
+            cursor: pointer;
+            &:hover {
+                color: $light-green;
+            }
+        }
+    }
+    .icons {
+        position  : absolute;
+        font-size : 4em;
+        text-align: center;
+        top       : 36%;
+        left      : 0;
+        right     : 0;
+        margin    : 0 auto;
+        color     : white;
+        i {
+            opacity: 0.7;
+            padding: 0 2%;
+            &:hover {
+                opacity: 1;
+                cursor : pointer;
+            }
+        }
+    }
+    .nametag-container {
+        position      : absolute;
+        font-size     : 4em;
+        letter-spacing: 5px;
+        top           : 45%;
+        left          : 0;
+        right         : 0;
+        margin        : 0 auto;
+        width         : 100%;
+        .nametag {
+            border-radius   : 10px;
+            background-color: rgba(255,255,255,.80);
+            color           : $green;
+            line-height     : 0.9;
+            text-align      : center;
+            padding         : 20px 0;
+            div {
+                font-weight: 300;
+                font-size  : 0.5em;
+            }
+        }
+    }
+}
+.main-container {
+    height: 1200px;
 }
 .browserupgrade {
     margin    : 0.2em 0;
@@ -22,12 +82,14 @@ body {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
+    i {
+        margin-top: -8%;
+    }
+}
+@media only screen and (max-width: 768px) {
     
 }
-@media only screen and (min-width: 768px) {
-    
-}
-@media only screen and (min-width: 1140px) {
+@media only screen and (max-width: 1140px) {
     
 }
