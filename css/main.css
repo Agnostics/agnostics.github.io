@@ -1,24 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600,500,700);
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4; }
 
 body {
-  font: 16px/26px Poppins;
+  font: 16px/26px Dosis;
   margin: 0; }
 
 .header-container {
-  background: url(../img/header_bg.jpg) no-repeat center center fixed;
+  background: url(../img/header_bg2.jpg) no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   max-height: 100%; }
+  .header-container .logo img {
+    float: left;
+    height: 30px;
+    width: auto;
+    margin: 26px 0 0 60px; }
+    .header-container .logo img:hover {
+      cursor: pointer; }
   .header-container nav {
+    font-size: 0.8em;
     color: #eee;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     float: right;
-    margin: 2% 10% 0 0;
-    display: inline-flex; }
+    margin: 16px 60px 0 0;
+    display: inline-flex;
+    text-transform: uppercase;
+    font-weight: 400; }
     .header-container nav div {
       margin: 10px;
       cursor: pointer; }
@@ -28,15 +39,17 @@ body {
     position: absolute;
     font-size: 4em;
     text-align: center;
-    top: 36%;
+    top: 38%;
     left: 0;
     right: 0;
     margin: 0 auto;
     color: white; }
-    .header-container .icons i {
-      opacity: 0.7;
-      padding: 0 2%; }
-      .header-container .icons i:hover {
+    .header-container .icons img {
+      opacity: 0.5;
+      padding: 0 2%;
+      height: 50px;
+      width: auto; }
+      .header-container .icons img:hover {
         opacity: 1;
         cursor: pointer; }
   .header-container .nametag-container {
@@ -47,20 +60,59 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 100%; }
+    max-width: 900px; }
     .header-container .nametag-container .nametag {
-      border-radius: 10px;
+      text-transform: uppercase;
       background-color: rgba(255, 255, 255, 0.8);
       color: #6ac386;
       line-height: 0.9;
       text-align: center;
-      padding: 20px 0; }
+      padding: 20px 0;
+      letter-spacing: 20px; }
       .header-container .nametag-container .nametag div {
-        font-weight: 300;
+        font-weight: 200;
         font-size: 0.5em; }
+  .header-container .fa-angle-double-down {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    top: 95%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center; }
 
 .main-container {
-  height: 1200px; }
+  background-color: #eee; }
+  .main-container .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; }
+    .main-container .about-container .title {
+      font-size: 3em;
+      padding: 50px 0 0;
+      line-height: 0;
+      color: #6ac386;
+      letter-spacing: 5px;
+      font-weight: 200; }
+      .main-container .about-container .title .left {
+        padding-right: 200px; }
+      .main-container .about-container .title .right {
+        padding-left: 200px; }
+    .main-container .about-container .about {
+      display: inline-flex;
+      padding-bottom: 50px; }
+      .main-container .about-container .about img {
+        box-sizing: border-box;
+        border: 10px solid #84cc9b;
+        border-radius: 100%;
+        background-color: #84cc9b; }
+      .main-container .about-container .about p {
+        width: 400px;
+        letter-spacing: 2px;
+        padding-left: 20px;
+        font-size: 1.1em;
+        color: #7B7B7B; }
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -72,5 +124,15 @@ body {
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 480px) {
-  i {
-    margin-top: -8%; } }
+  img {
+    margin-top: -8%; }
+  .nametag {
+    letter-spacing: 0 !important; }
+  nav {
+    margin: 16px 60px 0 0; } }
+
+@media only screen and (max-width: 768px) {
+  img {
+    margin-top: -6%; }
+  .nametag {
+    letter-spacing: 5 !important; } }

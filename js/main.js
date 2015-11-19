@@ -1,5 +1,3 @@
-var app = angular.module('MainApp', []);
-
-app.controller('mainCTRL', function ($scope, $http) {
-
+$(document).ready(function () {
+	console.log('obj');
 });

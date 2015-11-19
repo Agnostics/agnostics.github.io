@@ -1,31 +1,48 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,600,500,700);
-$light-green: #85f2a7;
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+$link-green: #85f2a7;
+$light-green: #84cc9b;
 $green: #6ac386;
+$gray-text: #7B7B7B;
 html {
     color      : #222;
     font-size  : 1em;
     line-height: 1.4;
 }
 body {
-    font  : 16px/26px Poppins;
+    font  : 16px/26px Dosis;
     margin: 0;
 }
 .header-container {
-    background     : url(../img/header_bg.jpg) no-repeat center center fixed;
+    background     : url(../img/header_bg2.jpg) no-repeat center center fixed;
     background-size: cover;
     min-height     : 100vh;
     max-height     : 100%;
+    .logo {
+        img {
+            float : left;
+            height: 30px;
+            width : auto;
+            margin: 26px 0 0 60px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
     nav {
+        font-size     : 0.8em;
         color         : #eee;
-        letter-spacing: 3px;
+        letter-spacing: 4px;
         float         : right;
-        margin        : 2% 10% 0 0;
+        margin        : 16px 60px 0 0;
         display       : inline-flex;
+        text-transform: uppercase;
+        font-weight   : 400;
         div {
             margin: 10px;
             cursor: pointer;
             &:hover {
-                color: $light-green;
+                color: $link-green;
             }
         }
     }
@@ -33,14 +50,16 @@ body {
         position  : absolute;
         font-size : 4em;
         text-align: center;
-        top       : 36%;
+        top       : 38%;
         left      : 0;
         right     : 0;
         margin    : 0 auto;
         color     : white;
-        i {
-            opacity: 0.7;
+        img {
+            opacity: 0.5;
             padding: 0 2%;
+            height : 50px;
+            width  : auto;
             &:hover {
                 opacity: 1;
                 cursor : pointer;
@@ -55,23 +74,70 @@ body {
         left          : 0;
         right         : 0;
         margin        : 0 auto;
-        width         : 100%;
+        max-width     : 900px;
         .nametag {
-            border-radius   : 10px;
+            text-transform  : uppercase;
             background-color: rgba(255,255,255,.80);
             color           : $green;
             line-height     : 0.9;
             text-align      : center;
             padding         : 20px 0;
+            letter-spacing  : 20px;
             div {
-                font-weight: 300;
+                font-weight: 200;
                 font-size  : 0.5em;
             }
         }
     }
+    .fa-angle-double-down {
+        position  : absolute;
+        color     : white;
+        font-size : 2em;
+        top       : 95%;
+        left      : 0;
+        right     : 0;
+        margin    : 0 auto;
+        text-align: center;
+    }
 }
 .main-container {
-    height: 1200px;
+    background-color: #eee;
+    .about-container {
+        max-width : 1200px;
+        margin    : 0 auto;
+        text-align: center;
+        .title {
+            font-size     : 3em;
+            padding       : 50px 0 0;
+            line-height   : 0;
+            color         : $green;
+            letter-spacing: 5px;
+            font-weight   : 200;
+            .left {
+                padding-right: 200px;
+            }
+            .right {
+                padding-left: 200px;
+            }
+        }
+        .about {
+            display       : inline-flex;
+            padding-bottom: 50px;
+            img {
+                box-sizing      : border-box;
+                border          : 10px solid $light-green;
+                border-radius   : 100%;
+                background-color: $light-green;
+            }
+            p {
+                width         : 400px;
+                letter-spacing: 2px;
+                padding-left  : 20px;
+                font-size     : 1.1em;
+                color         : $gray-text;
+            }
+        }
+    }
 }
 .browserupgrade {
     margin    : 0.2em 0;
@@ -83,12 +149,23 @@ body {
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 480px) {
-    i {
+    img {
         margin-top: -8%;
+    }
+    .nametag {
+        letter-spacing: 0 !important;
+    }
+    nav {
+        margin: 16px 60px 0 0;
     }
 }
 @media only screen and (max-width: 768px) {
-    
+    img {
+        margin-top: -6%;
+    }
+    .nametag {
+        letter-spacing: 5 !important;
+    }
 }
 @media only screen and (max-width: 1140px) {
     
