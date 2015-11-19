@@ -74,7 +74,7 @@ body {
         left          : 0;
         right         : 0;
         margin        : 0 auto;
-        max-width     : 900px;
+        max-width     : 825px;
         .nametag {
             text-transform  : uppercase;
             background-color: rgba(255,255,255,.80);
@@ -98,6 +98,9 @@ body {
         right     : 0;
         margin    : 0 auto;
         text-align: center;
+        &:hover {
+            color: $link-green;
+        }
     }
 }
 .main-container {
@@ -108,13 +111,13 @@ body {
         text-align: center;
         .title {
             font-size     : 3em;
-            padding       : 50px 0 0;
+            padding       : 40px 0 0;
             line-height   : 0;
             color         : $green;
             letter-spacing: 5px;
             font-weight   : 200;
             .left {
-                padding-right: 200px;
+                padding-right: 350px;
             }
             .right {
                 padding-left: 200px;
@@ -122,7 +125,7 @@ body {
         }
         .about {
             display       : inline-flex;
-            padding-bottom: 50px;
+            padding-bottom: 70px;
             img {
                 box-sizing      : border-box;
                 border          : 10px solid $light-green;
@@ -132,9 +135,44 @@ body {
             p {
                 width         : 400px;
                 letter-spacing: 2px;
-                padding-left  : 20px;
+                padding-left  : 25px;
                 font-size     : 1.1em;
                 color         : $gray-text;
+            }
+        }
+    }
+    .skills-container {
+        background-color: $green;
+        margin          : 0 auto;
+        text-align      : center;
+        .title {
+            font-size     : 3em;
+            padding       : 40px 0 0;
+            line-height   : 0;
+            color         : white;
+            letter-spacing: 5px;
+            font-weight   : 200;
+            .right {
+                padding-left: 300px;
+            }
+            .left {
+                padding-right: 150px;
+            }
+        }
+        .badges {
+            display       : inline-flex;
+            padding-top   : 10px;
+            padding-bottom: 50px;
+            img {
+                padding: 0 10px;
+                height : 50px;
+                width  : auto;
+                cursor : pointer;
+            }
+            .badge-name {
+                color         : white;
+                letter-spacing: 5px;
+                display       : none;
             }
         }
     }
@@ -149,23 +187,10 @@ body {
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 480px) {
-    img {
-        margin-top: -8%;
-    }
-    .nametag {
-        letter-spacing: 0 !important;
-    }
-    nav {
-        margin: 16px 60px 0 0;
-    }
+    
 }
 @media only screen and (max-width: 768px) {
-    img {
-        margin-top: -6%;
-    }
-    .nametag {
-        letter-spacing: 5 !important;
-    }
+    
 }
 @media only screen and (max-width: 1140px) {
     
