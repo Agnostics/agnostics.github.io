@@ -3,7 +3,8 @@
 $link-green: #85f2a7;
 $light-green: #84cc9b;
 $green: #6ac386;
-$gray-text: #7B7B7B;
+$darkgreen: #288988;
+$gray-text: #5D5D5D;
 html {
     color      : #222;
     font-size  : 1em;
@@ -14,7 +15,7 @@ body {
     margin: 0;
 }
 .header-container {
-    background     : url(../img/header_bg2.jpg) no-repeat center center fixed;
+    background     : url(../img/space.jpg) no-repeat fixed;
     background-size: cover;
     min-height     : 100vh;
     max-height     : 100%;
@@ -46,26 +47,6 @@ body {
             }
         }
     }
-    .icons {
-        position  : absolute;
-        font-size : 4em;
-        text-align: center;
-        top       : 53%;
-        left      : 0;
-        right     : 0;
-        margin    : 0 auto;
-        color     : white;
-        img {
-            opacity: 0.5;
-            padding: 0 2%;
-            height : 50px;
-            width  : auto;
-            &:hover {
-                opacity: 1;
-                cursor : pointer;
-            }
-        }
-    }
     .nametag-container {
         position      : absolute;
         font-size     : 4em;
@@ -80,11 +61,25 @@ body {
             line-height   : 1.2;
             text-align    : center;
             padding       : 20px 0;
-            letter-spacing: 40px;
+            letter-spacing: 30px;
             div {
-                font-weight: 200;
-                font-size  : 0.5em;
-                color      : $link-green;
+                
+                // font-weight: 200;
+                font-size: 0.5em;
+                color    : #34ADAB;
+            }
+        }
+        .icons {
+            text-align: center;
+            img {
+                opacity: 0.5;
+                padding: 0 2%;
+                height : 50px;
+                width  : auto;
+                &:hover {
+                    opacity: 1;
+                    cursor : pointer;
+                }
             }
         }
     }
@@ -103,7 +98,10 @@ body {
     }
 }
 .main-container {
-    background-color: #eee;
+    background-color  : #fff;
+    -webkit-box-shadow: 0 0 30px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow   : 0 0 30px 0 rgba(0,0,0,0.75);
+    box-shadow        : 0 0 30px 0 rgba(0,0,0,0.75);
     .about-container {
         max-width : 1200px;
         margin    : 0 auto;
@@ -112,24 +110,21 @@ body {
             font-size     : 3em;
             padding       : 40px 0 0;
             line-height   : 0;
-            color         : $green;
+            color         : $darkgreen;
             letter-spacing: 5px;
-            font-weight   : 200;
             .left {
                 padding-right: 350px;
             }
             .right {
-                padding-left: 200px;
+                padding-left: 235px;
             }
         }
         .about {
             display       : inline-flex;
             padding-bottom: 70px;
             img {
-                box-sizing      : border-box;
-                border          : 10px solid $light-green;
-                border-radius   : 100%;
-                background-color: $light-green;
+                box-sizing: border-box;
+                margin-top: -30px;
             }
             p {
                 width         : 400px;
@@ -137,6 +132,7 @@ body {
                 padding-left  : 25px;
                 font-size     : 1.1em;
                 color         : $gray-text;
+                margin-top    : -5px;
             }
         }
     }
@@ -144,6 +140,8 @@ body {
         background-color: $green;
         margin          : 0 auto;
         text-align      : center;
+        background      : url(../img/space.jpg) no-repeat center center fixed;
+        background-size : cover;
         .title {
             font-size     : 3em;
             padding       : 40px 0 0;
@@ -161,7 +159,7 @@ body {
         .badges {
             display       : inline-flex;
             padding-top   : 10px;
-            padding-bottom: 50px;
+            padding-bottom: 80px;
             img {
                 padding: 0 10px;
                 height : 50px;
@@ -174,6 +172,39 @@ body {
                 display       : none;
             }
         }
+    }
+    .showcase-container {
+        margin    : 0 auto;
+        text-align: center;
+        .title {
+            font-size     : 3em;
+            padding       : 40px 0 30px;
+            line-height   : 0;
+            color         : $darkgreen;
+            letter-spacing: 5px;
+        }
+        .showcase {
+            max-width     : 1200px;
+            display       : inline-block;
+            padding-bottom: 50px;
+            img {
+                box-sizing: border-box;
+                height    : 300px;
+                width     : 400px;
+                
+                // border    : 5px solid #eee;
+                margin    : -2px;
+                margin-bottom: -5px;
+                &:hover {
+                    border: 5px solid $darkgreen;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .contact-container {
+        height    : 400px;
+        background: black;
     }
 }
 .browserupgrade {
