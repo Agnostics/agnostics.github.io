@@ -157,11 +157,39 @@ body {
         margin: -2px;
         margin-bottom: -5px; }
         .main-container .showcase-container .showcase img:hover {
-          border: 5px solid #288988;
           cursor: pointer; }
   .main-container .contact-container {
-    height: 400px;
-    background: black; }
+    margin: 0 auto;
+    text-align: center;
+    background: url(../img/space.jpg) no-repeat center center fixed;
+    background-size: cover; }
+    .main-container .contact-container .title {
+      font-size: 3em;
+      padding: 40px 0 0;
+      line-height: 0;
+      color: white;
+      letter-spacing: 5px;
+      font-weight: 200; }
+    .main-container .contact-container .contact {
+      max-width: 1200px;
+      display: inline-block; }
+      .main-container .contact-container .contact .input {
+        width: 300px;
+        height: 40px;
+        background: none;
+        color: white;
+        border: 2px solid white;
+        padding-left: 10px;
+        border-radius: 5px; }
+      .main-container .contact-container .contact .message {
+        width: 610px;
+        height: 200px;
+        background: none;
+        color: white;
+        border: 2px solid white;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px; }
 
 .browserupgrade {
   margin: 0.2em 0;
