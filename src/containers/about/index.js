@@ -13,6 +13,7 @@ export default class About extends React.Component {
     componentDidMount() {
         this.setEllipse();
         this.changeFont();
+		console.log('bacon');
     }
 
     setEllipse() {
