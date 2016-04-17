@@ -13,7 +13,15 @@ export default class About extends React.Component {
     componentDidMount() {
         this.setEllipse();
         this.changeFont();
-		console.log('bacon');
+        console.log('bacon');
+    }
+
+    onResize(c, t) {
+        onresize = () => {
+            clearTimeout(t);
+            t = setTimeout(c, 100) // eslint-disable-line
+        };
+        return c;
     }
 
     setEllipse() {
@@ -35,10 +43,14 @@ export default class About extends React.Component {
     }
 
     render() {
-        $(window).resize(() => {
+		this.onResize(() => {
             this.setEllipse();
             this.changeFont();
-        });
+			console.log('resizeing');
+		});
+
+        // window.onresize(() => {
+        // });
 
         return (
             <div>
