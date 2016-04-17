@@ -23,7 +23,6 @@ module.exports = {
         screw_ie8: true
       }
     }),
-	new ExtractTextPlugin("app.css"),
     new StatsPlugin('webpack.stats.json', {
       source: false,
       modules: false
@@ -50,9 +49,6 @@ module.exports = {
       }, {
 		  test: /\.scss$/,
 		  loaders: ['style', 'css', 'sass'],
-		  loader: ExtractTextPlugin.extract(
-    "style",
-    "css!sass")
 	  },
       {
         test: /\.css?$/,
