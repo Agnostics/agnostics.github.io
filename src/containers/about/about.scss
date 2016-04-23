@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-//body {
-//    background-color: #0f0f0f;
-//}
+body {
+    background-color: #0f0f0f;
+}
 .top {
     width: 100%;
     height: 5px;
@@ -19,6 +19,15 @@
     img {
         width: 73%;
     }
+}
+.more-content {
+	width: calc(100% - 100px);
+    height: calc(100vh - 80px);
+    display: none;
+    float: right;
+	position: absolute;
+    margin-left: 100px;
+	z-index: -1;
 }
 .side {
     width: 27%;
@@ -88,18 +97,29 @@
         }
     }
 }
-
-.side-small{
-	width: 100px;
-	background-color: #0f0f0f;
-	position: fixed;
-	left: 0;
-	height: calc(100vh - 80px);
-	opacity:0 ;
-	color: white;
-	box-shadow: 0 0 17px 0 rgba(0,0,0,0.4);
+.side-small {
+    width: 100px;
+    background-color: #0f0f0f;
+    position: fixed;
+    left: 0;
+    height: calc(100vh - 80px);
+    opacity: 0;
+    color: white;
+    box-shadow: 0 0 17px 0 rgba(0,0,0,0.4);
+    .back {
+        padding: 20px 0.1%;
+        font-size: 32px;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+background-color: #1c1c1c;
+        &:hover {
+            background-color: #343434;
+            cursor: pointer;
+        }
+    }
 }
-
-.hidden{
-	display: none
+.hidden {
+    display: none;
 }

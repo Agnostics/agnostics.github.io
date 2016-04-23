@@ -8,7 +8,8 @@ export default class About extends React.Component {
     constructor() {
         super();
         this.state = ({para: ''});
-        this.handleClick = this.handleClick.bind(this);
+        this.showMore = this.showMore.bind(this);
+		this.showLess = this.showLess.bind(this);
     }
 
     componentDidMount() {
@@ -43,18 +44,43 @@ export default class About extends React.Component {
         }, 100);
     }
 
-    handleClick() {
+    showMore() {
         const width = $(window).width() - 100;
         $('.content').velocity({width: 0}, 'swing', 1000, () => {});
 		$('.desc').velocity({opacity: 0}, {display: 'none'}, 'swing', 500);
 		$('.avatar').velocity({opacity: 0}, {display: 'none'}, 'swing', 500);
 		$('.button-panel').velocity({opacity: 0}, {display: 'none'}, 'swing', 500);
 
+		$('.more-content').toggle();
         $('.side').velocity({left: `-=${width}`}, 'swing', 1000, () => {
-			$('.side').velocity({opacity: 0}, 'swing', 500);
+			$('.side').velocity({opacity: 0}, 'swing', 800, () => {
+				$('.side').css('display', 'none');
+				$('.content').css('display', 'none');
+			});
 			$('.side-small').velocity({opacity: 1}, 'swing', 100);
 		});
+		$('body').css('background-color', '#fff');
     }
+
+	showLess() {
+		$('.side-small').velocity({opacity: 0}, 'swing', 100);
+		$('.side').css('display', '');
+		$('.side').velocity({opacity: 1}, 'swing', 100);
+		$('.side').velocity({left: '0px'}, 'swing', 900);
+
+		let tempCont = $(window).width() * 73;
+			tempCont /= 100;
+			tempCont += 30;
+
+		$('.content').css('display', '');
+		$('.content').velocity({width: `${tempCont}px`}, 'swing', 1000, () => {
+			$('body').css('background-color', '#0f0f0f');
+		$('.more-content').toggle();
+		});
+		$('.desc').velocity({opacity: 1}, {display: ''}, 'swing', 500);
+		$('.avatar').velocity({opacity: 1}, {display: ''}, 'swing', 500);
+		$('.button-panel').velocity({opacity: 1}, {display: ''}, 'swing', 500);
+	}
 
     changeFont() {
         if ($('.side').width() < 300) {
@@ -68,6 +94,7 @@ export default class About extends React.Component {
 
     handleResize() {
         $('.side').css('height', 'calc(100vh - 80px)');
+		$('.content').css('width', 'calc(73% + 30px)');
     }
 
     render() {
@@ -81,7 +108,12 @@ export default class About extends React.Component {
             <div>
                 <div className="top"></div>
                 <div className="content"></div>
-				<div className="side-small"> Bacon</div>
+				<div className="more-content"> HELLO WOLRD</div>
+				<div className="side-small">
+					<div className="back" onClick={this.showLess}>
+						<i className="icon ion-chevron-left"/>
+					</div>
+				</div>
                 <div className="side" id="side">
                     <img className="avatar" src="/src/assets/img/me.png"/>
                     <div className="desc">
@@ -99,7 +131,7 @@ export default class About extends React.Component {
                         <div className="button-arrow">
                             <i className="icon ion-chevron-down"></i>
                         </div>
-                        <div className="button-arrow" onClick={this.handleClick}>
+                        <div className="button-arrow" onClick={this.showMore}>
                             <i className="icon ion-chevron-right"></i>
                         </div>
 
