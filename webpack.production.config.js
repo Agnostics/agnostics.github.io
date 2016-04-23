@@ -23,6 +23,11 @@ module.exports = {
         screw_ie8: true
       }
     }),
+	new webpack.ProvidePlugin({
+		$: "jquery",
+		jQuery: "jquery",
+		"window.jQuery": "jquery"
+	}),
     new StatsPlugin('webpack.stats.json', {
       source: false,
       modules: false

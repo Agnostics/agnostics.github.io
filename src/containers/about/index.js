@@ -1,19 +1,21 @@
 import './about.scss';
 import React from 'react';
 import Dotdotdot from 'react-dotdotdot';
-import $ from 'jquery';
+import velocity from './velocity.js';
 
 export default class About extends React.Component {
 
     constructor() {
         super();
         this.state = ({para: ''});
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
         this.setEllipse();
         this.changeFont();
-        console.log('bacon');
+        const side = $('.side');
+        this.animateEle(side);
     }
 
     onResize(c, t) {
@@ -32,6 +34,28 @@ export default class About extends React.Component {
         }, 100);
     }
 
+    animateEle(side) {
+        const height = $(window).height() - 80;
+        setTimeout(() => {
+            side.velocity({
+                height
+            }, 'easeInSine', 1500);
+        }, 100);
+    }
+
+    handleClick() {
+        const width = $(window).width() - 100;
+        $('.content').velocity({width: 0}, 'swing', 1000, () => {});
+		$('.desc').velocity({opacity: 0}, {display: 'none'}, 'swing', 500);
+		$('.avatar').velocity({opacity: 0}, {display: 'none'}, 'swing', 500);
+		$('.button-panel').velocity({opacity: 0}, {display: 'none'}, 'swing', 500);
+
+        $('.side').velocity({left: `-=${width}`}, 'swing', 1000, () => {
+			$('.side').velocity({opacity: 0}, 'swing', 500);
+			$('.side-small').velocity({opacity: 1}, 'swing', 100);
+		});
+    }
+
     changeFont() {
         if ($('.side').width() < 300) {
             const fontSize = '12px';
@@ -42,20 +66,22 @@ export default class About extends React.Component {
         }
     }
 
+    handleResize() {
+        $('.side').css('height', 'calc(100vh - 80px)');
+    }
+
     render() {
-		this.onResize(() => {
+        this.onResize(() => {
             this.setEllipse();
             this.changeFont();
-			console.log('resizeing');
-		});
-
-        // window.onresize(() => {
-        // });
+            this.handleResize();
+        });
 
         return (
             <div>
                 <div className="top"></div>
                 <div className="content"></div>
+				<div className="side-small"> Bacon</div>
                 <div className="side" id="side">
                     <img className="avatar" src="/src/assets/img/me.png"/>
                     <div className="desc">
@@ -73,7 +99,7 @@ export default class About extends React.Component {
                         <div className="button-arrow">
                             <i className="icon ion-chevron-down"></i>
                         </div>
-                        <div className="button-arrow">
+                        <div className="button-arrow" onClick={this.handleClick}>
                             <i className="icon ion-chevron-right"></i>
                         </div>
 

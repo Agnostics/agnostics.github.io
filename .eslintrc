@@ -16,6 +16,9 @@
     "react/prefer-stateless-function" : 0,
     "max-len" : 0
   },
+"env": {
+        "jquery": true
+    },
 "plugins": [
     "react"
   ]
