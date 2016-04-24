@@ -11,13 +11,13 @@ export default class Header extends React.Component {
                         <div className="name">BRANDON <span className="last">PADILLA</span></div>
                     </div>
                     <nav>
-                        <div className="nav-item sel">
-                            <div className="nav-text">about</div>
+                        <div className="nav-item sel" id="nav-1">
+                            <div className="nav-text" >about</div>
                         </div>
-                        <div className="nav-item">
+                        <div className="nav-item" id="nav-2">
                             <div className="nav-text">projects</div>
                         </div>
-                        <div className="nav-item">
+                        <div className="nav-item" id="nav-3">
                             <div className="nav-text">contact</div>
                         </div>
                     </nav>
