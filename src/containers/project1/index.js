@@ -1,31 +1,13 @@
 import './p1.scss';
-
 import React from 'react';
-import Dotdotdot from 'react-dotdotdot';
-
 import help from '../../assets/helper/';
 
-export default class ProjectOne extends React.Component {
-
-    constructor() {
-        super();
-        this.up = this.up.bind(this);
-    }
-
-    up() {
-        $('#projects').toggle('blind', {direction: 'down'}, 1500);
-		$('.sel').animate({backgroundColor: 'transparent'});
-		$('#nav-2').removeClass('sel');
-		$('#nav-1').addClass('sel');
-		$('.sel').animate({backgroundColor: '#0f0f0f'}, 1500);
-    }
-
+export default class Project1 extends React.Component {
     render() {
         return (
             <div id="p1">
-                <div className="top-1"></div>
                 <div className="content-1"></div>
-				<div className="more-content-1">adsfasdf</div>
+				<div className="more-1">adsfasdf</div>
 					<div className="side-small-1">
 						<div className="back" onClick={() => help.lessInfo(1)}>
 							<i className="icon ion-close-round"/>
@@ -44,10 +26,10 @@ export default class ProjectOne extends React.Component {
                     </div>
 
                     <div className="button-panel">
-                        <div className="button-arrow" onClick={() => help.up($('#about'), $('#projects'), '#0f0f0f', 1)}>
+                        <div className="button-arrow" onClick={() => help.up($('#about'), $('#p1'), '#303030', 1)}>
                             <i className="icon ion-chevron-up"></i>
                         </div>
-                        <div className="button-arrow" onClick={this.test}>
+                        <div className="button-arrow" onClick={() => help.down($('#p2'), $('#p1'), '#59c6c6', 2)}>
                             <i className="icon ion-chevron-down"></i>
                         </div>
                         <div className="button-arrow" onClick={() => help.moreInfo(1)}>

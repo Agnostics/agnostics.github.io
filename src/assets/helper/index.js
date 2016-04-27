@@ -55,12 +55,24 @@ const help = {
 	},
 
 	up(next, prev, color, toNav) {
-		next.css('display', '');
+		next.css('display', 'block');
 		prev.toggle('blind', {direction: 'down'}, 1500);
 		$('.sel').animate({backgroundColor: 'transparent'});
 		$(`#nav-${toNav + 1}`).removeClass('sel');
 		$(`#nav-${toNav}`).addClass('sel');
 		$('.sel').animate({backgroundColor: color}, 1500);
+	},
+
+	onResize(c, t) {
+		onresize = () => {
+			clearTimeout(t);
+			t = setTimeout(c, 100) // eslint-disable-line
+		};
+		return c;
+	},
+
+	handleResize() {
+		$('[class^="content"]').css('width', 'calc(73% + 30px)');
 	}
 
 };

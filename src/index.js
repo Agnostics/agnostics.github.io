@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 
 import Header from './components/header';
 import About from './containers/about';
+import Project1 from './containers/project1';
+import Project2 from './containers/project2';
 
 class App extends React.Component {
     render() {
@@ -11,6 +13,8 @@ class App extends React.Component {
             <div >
 				<Header/>
                 <About/>
+				<Project1/>
+				<Project2/>
             </div>
         );
     }
