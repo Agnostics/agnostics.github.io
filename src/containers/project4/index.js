@@ -17,8 +17,8 @@ export default class Project4 extends React.Component {
                 <div className="side-4" id="side">
                     <div className="desc">
 					<div className="title">PROJECT</div>
-                        <h1>Nightlife App</h1>
-                        <h3>full-stack web</h3>
+                        <h1>MultiShot</h1>
+                        <h3>in development</h3>
                         <p>First angular full-stack project with express backend. Fast load times and live preview of results allowing this site to be a quick and intuitive way to make polls. Register to save your polls or add an extra security feature for voters. Fully responsive, clean and fast.
 						</p>
 						<div className="more-info">
