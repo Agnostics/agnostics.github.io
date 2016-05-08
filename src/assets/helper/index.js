@@ -44,7 +44,7 @@ const help = {
 		$('.button-panel').velocity({opacity: 1}, {display: ''}, 'swing', 500);
 	},
 
-	down(next, prev, color, toNav) {
+	down(next, prev, color, toNav, act) {
 		next.toggle('blind', {direction: 'down'}, 1000, () => {
 			prev.css('display', 'none');
 		});
@@ -52,15 +52,19 @@ const help = {
 		$(`#nav-${toNav - 1}`).removeClass('sel');
 		$(`#nav-${toNav}`).addClass('sel');
 		$('.sel').animate({backgroundColor: color}, 1000);
+		$(`.num${act}`).toggleClass('act');
+		$(`.num${act - 1}`).toggleClass('act');
 	},
 
-	up(next, prev, color, toNav) {
+	up(next, prev, color, toNav, act) {
 		next.css('display', 'block');
 		prev.toggle('blind', {direction: 'down'}, 1500);
 		$('.sel').animate({backgroundColor: 'transparent'});
 		$(`#nav-${toNav + 1}`).removeClass('sel');
 		$(`#nav-${toNav}`).addClass('sel');
 		$('.sel').animate({backgroundColor: color}, 1500);
+		$(`.num${act}`).toggleClass('act');
+		$(`.num${act + 1}`).toggleClass('act');
 	},
 
 	onResize(c, t) {

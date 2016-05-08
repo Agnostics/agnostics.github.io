@@ -1,56 +1,72 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 .nav-bar {
-    background-color: white;
-    height: 75px;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
+	background-color: white;
+	height: 75px;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
 	position: fixed;
 	z-index: 3;
-	box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.05);
-
-    .logo {
-        padding-left: 2%;
-        display: inline-block;
-        height: 100%;
-        img {
-            width: 53px;
-            margin-top: 12px;
-        }
-        .name {
-            display: inline-block;
-            width: 100px;
-            height: 109%;
-            vertical-align: middle;
-            padding-left: 10px;
-            letter-spacing: 5px;
-            font-size: 18px;
-            .last {
-                letter-spacing: 8px;
-            }
-        }
-    }
-    nav {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        text-align: center;
-        .nav-item {
-            height: 75px;
-            padding: 0 25px;
-            display: inline-block;
-            &:hover {
-                background-color: #f4f4f4;
-                cursor: pointer;
-            }
-            .nav-text {
-                margin-top: 25px;
+	box-shadow: 0 0 11px 0 rgba(0,0,0,0.05);
+	.logo {
+		padding-left: 2%;
+		display: inline-block;
+		height: 100%;
+		img {
+			width: 53px;
+			margin-top: 12px;
+		}
+		.name {
+			display: inline-block;
+			width: 100px;
+			height: 109%;
+			vertical-align: middle;
+			padding-left: 10px;
+			letter-spacing: 5px;
+			font-size: 18px;
+			.last {
+				letter-spacing: 8px;
+			}
+		}
+	}
+	nav {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		text-align: center;
+		.nav-item {
+			height: 75px;
+			padding: 0 25px;
+			display: inline-block;
+			&:hover {
+				background-color: #f4f4f4;
+				cursor: pointer;
+			}
+			.nav-text {
+				margin-top: 25px;
 				letter-spacing: 5px;
-            }
-        }
-        .sel {
-            background-color: #303030;
+			}
+		}
+		.sel {
+			background-color: #303030;
 			color: white;
-        }
-    }
+		}
+	}
+}
+.tabs {
+	position: absolute;
+	z-index: 10;
+	.box {
+		display: inline-block;
+		height: 20px;
+		width: 22px;
+		opacity: 0.3;
+		margin-top: 3px;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.act {
+		opacity: 1;
+	}
 }

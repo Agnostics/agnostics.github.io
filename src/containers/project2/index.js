@@ -28,10 +28,10 @@ export default class Project2 extends React.Component {
                     </div>
 
                     <div className="button-panel">
-                        <div className="button-arrow" onClick={() => help.up($('#p1'), $('#p2'), '#dd7c7e')}>
+                        <div className="button-arrow" onClick={() => help.up($('#p1'), $('#p2'), '#dd7c7e', 2, 1)}>
                             <i className="icon ion-chevron-up"></i>
                         </div>
-                        <div className="button-arrow" onClick={() => help.down($('#p3'), $('#p2'), '#dd7c7e')}>
+                        <div className="button-arrow" onClick={() => help.down($('#p3'), $('#p2'), '#a872b5', 2, 3)}>
                             <i className="icon ion-chevron-down"></i>
                         </div>
                         <div className="button-arrow" onClick={() => help.moreInfo(2)}>

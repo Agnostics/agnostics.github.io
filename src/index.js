@@ -6,6 +6,9 @@ import Header from './components/header';
 import About from './containers/about';
 import Project1 from './containers/project1';
 import Project2 from './containers/project2';
+import Project3 from './containers/project3';
+import Project4 from './containers/project4';
+
 
 class App extends React.Component {
     render() {
@@ -15,6 +18,8 @@ class App extends React.Component {
                 <About/>
 				<Project1/>
 				<Project2/>
+				<Project3/>
+				<Project4/>
             </div>
         );
     }
