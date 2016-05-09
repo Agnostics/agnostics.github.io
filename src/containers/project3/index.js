@@ -21,7 +21,7 @@ export default class Project3 extends React.Component {
                         <h3>full-stack web</h3>
                         <p>First angular full-stack project with express backend. Fast load times and live preview of results allowing this site to be a quick and intuitive way to make polls. Register to save your polls or add an extra security feature for voters. Fully responsive, clean and fast.
 						</p>
-						<div className="more-info">
+						<div className="more-info" onClick={() => help.moreInfo(3)}>
 							<i className="icon ion-log-out"/>More info
 						</div>
 

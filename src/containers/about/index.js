@@ -1,10 +1,8 @@
 import './about.scss';
 import React from 'react';
-import Dotdotdot from 'react-dotdotdot';
 import More from './more';
 import velocity from '../../assets/helper/velocity.js';
 import jqueryUi from '../../assets/helper/jquery-ui.min.js'
-
 import help from '../../assets/helper/';
 
 export default class About extends React.Component {
@@ -50,7 +48,7 @@ export default class About extends React.Component {
                                 Have a project that needs some creative injection or reliable code then you’re at the right place. Currently located in the amazing NJ/NY area. A self-taught front and back end developer with the drive and dedication needed to succeed. I focus on clean, modern design with a strong emphasis on functionality.
                             </p>
 							<div className="more-info">
-								<span><i className="icon ion-log-out"/>More info</span>
+								<span onClick={() => help.moreInfo(0)}><i className="icon ion-log-out"/>More info</span>
 							</div>
                     </div>
 

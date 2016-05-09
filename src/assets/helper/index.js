@@ -77,6 +77,18 @@ const help = {
 
 	handleResize() {
 		$('[class^="content"]').css('width', 'calc(73% + 30px)');
+	},
+
+	loadMap() {
+		$('#map').css('z-index', 1);
+		setTimeout(() => {
+		$('#map').animate({opacity: 1}, 500);
+		}, 500);
+	},
+	unloadMap() {
+		$('#map').animate({opacity: 0}, 500, () => {
+			$('#map').css('z-index', -1);
+		});
 	}
 
 };

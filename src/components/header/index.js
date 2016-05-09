@@ -2,6 +2,16 @@ import './header.scss';
 import React from 'react';
 
 export default class Header extends React.Component {
+
+	constructor() {
+        super();
+		this.getCurrent = this.getCurrent.bind(this);
+    }
+
+	getCurrent() {
+		console.log('you dont know');
+	}
+
     render() {
         return (
             <div>
@@ -11,7 +21,7 @@ export default class Header extends React.Component {
                         <div className="name">BRANDON <span className="last">PADILLA</span></div>
                     </div>
                     <nav>
-                        <div className="nav-item sel" id="nav-1">
+                        <div className="nav-item sel" id="nav-1" onClick={this.getCurrent}>
                             <div className="nav-text" >about</div>
                         </div>
                         <div className="nav-item" id="nav-2">

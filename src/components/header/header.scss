@@ -39,7 +39,6 @@
 			padding: 0 25px;
 			display: inline-block;
 			&:hover {
-				background-color: #f4f4f4;
 				cursor: pointer;
 			}
 			.nav-text {
@@ -52,6 +51,7 @@
 			color: white;
 		}
 	}
+
 }
 .tabs {
 	position: absolute;
