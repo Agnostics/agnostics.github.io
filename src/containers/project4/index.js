@@ -16,7 +16,7 @@ export default class Project4 extends React.Component {
 	}
 
 	handleClickDown() {
-		help.down($('#contact'), $('#p4'), '#6f92ae', 3, 5);
+		help.down($('#p5'), $('#p4'), '#6f92ae', 3, 5);
 		help.loadMap();
 	}
 

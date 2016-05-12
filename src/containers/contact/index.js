@@ -10,13 +10,13 @@ export default class Project1 extends React.Component {
 	}
 
 	handleClickUp() {
-		help.up($('#p4'), $('#contact'), '#3d9a7a', 2, 4);
+		help.up($('#p4'), $('#p5'), '#3d9a7a', 2, 4);
 		help.unloadMap();
 	}
 
     render() {
         return (
-            <div id="contact">
+            <div id="p5">
                 <div className="content-5">
 
 				</div>

@@ -51,11 +51,23 @@
 			color: white;
 		}
 	}
+}
 
+#nav-1{
+	position: relative;
+	z-index: 100;
+}
+#nav-3{
+	position: relative;
+	z-index: 100;
 }
 .tabs {
 	position: absolute;
 	z-index: 10;
+	left: 0;
+	right: 28px;
+	margin-top: -31px;
+	color: black;
 	.box {
 		display: inline-block;
 		height: 20px;
@@ -64,9 +76,11 @@
 		margin-top: 3px;
 		&:hover {
 			opacity: 1;
+			cursor: pointer;
 		}
 	}
 	.act {
 		opacity: 1;
+		color: white;
 	}
 }

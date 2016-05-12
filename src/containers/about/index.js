@@ -31,7 +31,7 @@ export default class About extends React.Component {
         });
 
         return (
-            <div id="about">
+            <div id="p0" className="current">
                 <div className="content-0"></div>
 				<div className="more-0"><More/></div>
 				<div className="side-small-0">
@@ -56,7 +56,7 @@ export default class About extends React.Component {
                         <div className="button-arrow">
                             <i className="icon ion-chevron-up"></i>
                         </div>
-                        <div className="button-arrow" onClick={() => help.down($('#p1'), $('#about'), '#dd7c7e', 2, 1)}>
+                        <div className="button-arrow" onClick={() => help.down($('#p1'), $('#p0'), '#dd7c7e', 2, 1)}>
                             <i className="icon ion-chevron-down"></i>
                         </div>
                         <div className="button-arrow" onClick={() => help.moreInfo(0)}>

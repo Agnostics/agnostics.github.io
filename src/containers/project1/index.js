@@ -26,7 +26,7 @@ export default class Project1 extends React.Component {
                     </div>
 
                     <div className="button-panel">
-                        <div className="button-arrow" onClick={() => help.up($('#about'), $('#p1'), '#303030', 1, 0)}>
+                        <div className="button-arrow" onClick={() => help.up($('#p0'), $('#p1'), '#303030', 1, 0)}>
                             <i className="icon ion-chevron-up"></i>
                         </div>
                         <div className="button-arrow" onClick={() => help.down($('#p2'), $('#p1'), '#59c6c6', 2, 2)}>

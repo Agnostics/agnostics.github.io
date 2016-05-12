@@ -45,26 +45,39 @@ const help = {
 	},
 
 	down(next, prev, color, toNav, act) {
+		this.clearSel();
 		next.toggle('blind', {direction: 'down'}, 1000, () => {
+			prev.removeClass('current');
 			prev.css('display', 'none');
 		});
-		$('.sel').animate({backgroundColor: 'transparent'});
-		$(`#nav-${toNav - 1}`).removeClass('sel');
+		next.addClass('current');
+
 		$(`#nav-${toNav}`).addClass('sel');
 		$('.sel').animate({backgroundColor: color}, 1000);
 		$(`.num${act}`).toggleClass('act');
-		$(`.num${act - 1}`).toggleClass('act');
 	},
 
 	up(next, prev, color, toNav, act) {
+		this.clearSel();
 		next.css('display', 'block');
+		next.addClass('current');
 		prev.toggle('blind', {direction: 'down'}, 1500);
-		$('.sel').animate({backgroundColor: 'transparent'});
-		$(`#nav-${toNav + 1}`).removeClass('sel');
+		prev.removeClass('current');
 		$(`#nav-${toNav}`).addClass('sel');
 		$('.sel').animate({backgroundColor: color}, 1500);
 		$(`.num${act}`).toggleClass('act');
-		$(`.num${act + 1}`).toggleClass('act');
+	},
+
+	clearSel() {
+		for (let i = 0; i < 4; i++) {
+			$('.sel').css({backgroundColor: '#ffffff'});
+			$(`#nav-${i}`).removeClass('sel');
+		}
+
+		for (let i = 0; i < 5; i++) {
+			$('.sel').css({backgroundColor: '#ffffff'});
+			$(`.num${i}`).removeClass('act');
+		}
 	},
 
 	onResize(c, t) {
@@ -89,6 +102,17 @@ const help = {
 		$('#map').animate({opacity: 0}, 500, () => {
 			$('#map').css('z-index', -1);
 		});
+	},
+	currentPage() {
+		let output = '';
+		$('[id^=p]').each((i, e) => {
+			if ($(e).hasClass('current')) {
+				output = e.id;
+				return output;
+			}
+		return output;
+		});
+	return output;
 	}
 
 };
