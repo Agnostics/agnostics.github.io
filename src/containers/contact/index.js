@@ -20,7 +20,7 @@ export default class Project1 extends React.Component {
                 <div className="content-5">
 
 				</div>
-				<div className="more-5">adsfasdf</div>
+				<div className="more-5"></div>
 					<div className="side-small-5">
 						<div className="back" onClick={() => help.lessInfo(5)}>
 							<i className="icon ion-close-round"/>

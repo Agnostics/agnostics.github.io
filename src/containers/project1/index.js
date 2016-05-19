@@ -1,13 +1,15 @@
 import './p1.scss';
 import React from 'react';
 import help from '../../assets/helper/';
+import More from './more';
+
 
 export default class Project1 extends React.Component {
     render() {
         return (
             <div id="p1">
                 <div className="content-1"></div>
-				<div className="more-1">adsfasdf</div>
+				<div className="more-1"><More/></div>
 					<div className="side-small-1">
 						<div className="back" onClick={() => help.lessInfo(1)}>
 							<i className="icon ion-close-round"/>
@@ -21,7 +23,7 @@ export default class Project1 extends React.Component {
                         <h3>in development</h3>
                         <p>This project is still in it's early development stages. The object was to create a place where people can post articles for various topics. The design idea was to keep things very modular and clean. Main focus was placed on the article view and text.</p>
                         <div className="more-info-1" onClick={() => help.moreInfo(1)}>
-                            <i className="icon ion-log-out"/>More info
+                            <i className="icon ion-log-out"/>View Project
                         </div>
                     </div>
 

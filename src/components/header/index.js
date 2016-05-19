@@ -6,24 +6,36 @@ export default class Header extends React.Component {
 
 	constructor() {
         super();
-		this.getCurrent = this.getCurrent.bind(this);
+		this.newPage = this.newPage.bind(this);
     }
 
-	getCurrent(ele) {
+	newPage(ele) {
 		helper.clearSel();
-		switch (ele.currentTarget.id) {
+		const id = ele.currentTarget.id;
+		const projectNumber = helper.currentPage().slice(-1);
+		if ($(`.content-${projectNumber}`).width() === 0) {
+			helper.lessInfo(projectNumber);
+			setTimeout(() => {
+				this.switchPage(id);
+			}, 1000);
+		} else {
+			this.switchPage(id);
+		}
+	}
+
+	switchPage(id) {
+		switch (id) {
 			case 'nav-1':
 				$('#nav-1').toggleClass('sel');
 				$('.sel').animate({backgroundColor: '#303030'}, 500);
 				helper.unloadMap();
 
-				if (parseInt(helper.currentPage().slice(1), 10) > 1) {
+				if (parseInt(helper.currentPage().slice(1), 10) > 0) {
 						$('#p0').css('display', 'block');
 						$(`#${helper.currentPage()}`).toggle('blind', {direction: 'down'}, 1000);
 						$('#p0').addClass('current');
 						$(`#${helper.currentPage()}`).removeClass('current');
 				} else {
-					console.log('we gucci');
 				$('#p0').toggle('blind', {direction: 'down'}, 1000, () => {
 					console.log(helper.currentPage());
 					$(`#${helper.currentPage()}`).css('display', 'none');
@@ -46,7 +58,6 @@ export default class Header extends React.Component {
 						$('#p1').addClass('current');
 						$(`#${helper.currentPage()}`).removeClass('current');
 				} else {
-					console.log('we gucci');
 				$('#p1').toggle('blind', {direction: 'down'}, 1000, () => {
 					$(`#${helper.currentPage()}`).css('display', 'none');
 					$(`#${helper.currentPage()}`).removeClass('current');
@@ -66,7 +77,6 @@ export default class Header extends React.Component {
 						$('#p2').addClass('current');
 						$(`#${helper.currentPage()}`).removeClass('current');
 				} else {
-					console.log('we gucci');
 				$('#p2').toggle('blind', {direction: 'down'}, 1000, () => {
 					$(`#${helper.currentPage()}`).css('display', 'none');
 					$(`#${helper.currentPage()}`).removeClass('current');
@@ -86,7 +96,6 @@ export default class Header extends React.Component {
 						$('#p3').addClass('current');
 						$(`#${helper.currentPage()}`).removeClass('current');
 				} else {
-					console.log('we gucci');
 				$('#p3').toggle('blind', {direction: 'down'}, 1000, () => {
 					console.log(helper.currentPage());
 					$(`#${helper.currentPage()}`).css('display', 'none');
@@ -116,7 +125,7 @@ export default class Header extends React.Component {
 				}
 				break;
 			case 'nav-3':
-				$(`#${ele.currentTarget.id}`).toggleClass('sel');
+				$(`#${id}`).toggleClass('sel');
 				$('.sel').animate({backgroundColor: '#6f92ae'}, 500);
 				helper.loadMap();
 
@@ -148,19 +157,19 @@ export default class Header extends React.Component {
                         <div className="name">BRANDON <span className="last">PADILLA</span></div>
                     </div>
                     <nav>
-                        <div className="nav-item sel" id="nav-1" onClick={this.getCurrent}>
+                        <div className="nav-item sel" id="nav-1" onClick={this.newPage}>
                             <div className="nav-text" >about</div>
                         </div>
-                        <div className="nav-item" id="nav-2" onClick={this.getCurrent}>
+                        <div className="nav-item" id="nav-2" onClick={this.newPage}>
                             <div className="nav-text">project</div>
                         </div>
 						<div className="tabs">
-							<div className="box num1" id="tab1" onClick={this.getCurrent}>1</div>
-							<div className="box num2" id="tab2" onClick={this.getCurrent}>2</div>
-							<div className="box num3" id="tab3" onClick={this.getCurrent}>3</div>
-							<div className="box num4" id="tab4" onClick={this.getCurrent}>4</div>
+							<div className="box num1" id="tab1" onClick={this.newPage}>1</div>
+							<div className="box num2" id="tab2" onClick={this.newPage}>2</div>
+							<div className="box num3" id="tab3" onClick={this.newPage}>3</div>
+							<div className="box num4" id="tab4" onClick={this.newPage}>4</div>
 						</div>
-                        <div className="nav-item" id="nav-3" onClick={this.getCurrent}>
+                        <div className="nav-item" id="nav-3" onClick={this.newPage}>
                             <div className="nav-text">contact</div>
                         </div>
                     </nav>

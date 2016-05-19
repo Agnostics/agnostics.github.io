@@ -22,7 +22,7 @@ export default class Project2 extends React.Component {
                         <p>First angular full-stack project with express backend. Fast load times and live preview of results allowing this site to be a quick and intuitive way to make polls. Register to save your polls or add an extra security feature for voters. Fully responsive, clean and fast.
 						</p>
 						<div className="more-info" onClick={() => help.moreInfo(2)}>
-							<i className="icon ion-log-out"/>More info
+							<i className="icon ion-log-out"/>View Project
 						</div>
 
                     </div>

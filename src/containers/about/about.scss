@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 $mainColor: #303030;
 #p0 {
-	position: fixed;
+	position: absolute;
 	display: block;
 	left: 0;
 	right: 0;
@@ -12,8 +12,9 @@ body {
 	background-color: #0f0f0f;
 }
 .content-0 {
+	position: absolute;
 	width: calc(73% + 30px);
-	background-color: $mainColor;
+	background-color: white;
 	margin-left: -30px;
 	background-repeat: no-repeat;
 	background-image: url('/src/assets/img/about.jpg');
@@ -26,15 +27,42 @@ body {
 	}
 }
 .more-0 {
-	display: none;
 	position: absolute;
 	margin-left: 100px;
-	margin-top: 80px;
+	width: calc(100% - 100px);
+	margin-top: 75px;
 	z-index: -1;
+	display: none;
 	.contain-more {
 		margin: 10px;
-		h1 {
-			margin-left: 20px;
+		.title {
+			padding-top: 5%;
+			color: #333;
+			font-size: 1.5em;
+		}
+		.icons {
+			img {
+				width: 50px;
+				display: inline-block;
+				padding: 20px;
+			}
+		}
+		.text {
+			font-size: 0.7em;
+			letter-spacing: 4px;
+			color: #616161;
+		}
+		.info {
+			width: 50%;
+			font-size: 18px;
+			padding-left: 10%;
+			float: left;
+		}
+		.tech {
+			float: right;
+			width: 25%;
+			margin-right: 10%;
+			max-width: 300px;
 		}
 	}
 }

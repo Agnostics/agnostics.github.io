@@ -1,6 +1,6 @@
 $mainColor: #59c6c6;
 #p2 {
-	position: fixed;
+	position: absolute;
 	display: block;
 	left: 0;
 	right: 0;
@@ -103,6 +103,7 @@ $mainColor: #59c6c6;
 	}
 }
 .content-2 {
+	position: absolute;
 	width: calc(73% + 30px);
 	background-color: #0f0f0f;
 	margin-left: -30px;

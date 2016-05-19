@@ -5,7 +5,7 @@ const help = {
 		$(`.more-content-${projectNumber}`).css('overflow', 'auto');
         $(`.content-${projectNumber}`).velocity({width: 0}, 'swing', 1000);
 
-		$(`.more-content-${projectNumber}`).toggle();
+		$(`.more-${projectNumber}`).toggle();
 
 		$(`.side-${projectNumber}`).velocity({left: `-=${width}`}, 'swing', 1000);
 
@@ -13,6 +13,7 @@ const help = {
 			$(`.side-${projectNumber}`).velocity({opacity: 0}, {queue: false, duration: 100, complete: () => {
 				$(`.side-${projectNumber}`).css('display', 'none');
 				$(`.content-${projectNumber}`).css('display', 'none');
+				$(`.more-${projectNumber}`).css('z-index', 1);
 			}});
 		}, 900);
 
@@ -25,19 +26,20 @@ const help = {
 
 	lessInfo(projectNumber) {
 		$(`.more-content-${projectNumber}`).css('overflow', 'hidden');
+		$(`.more-${projectNumber}`).css('z-index', -1);
 		$(`.side-${projectNumber}`).css('display', '');
 		$(`.side-${projectNumber}`).velocity({opacity: 1}, 'swing', 100);
 		$(`.side-small-${projectNumber}`).velocity({opacity: 0}, 'swing', 300);
 		$(`.side-${projectNumber}`).velocity({left: '0px'}, 'swing', 900);
 
-		let tempCont = $(window).width() * 73;
+		let tempCont = $(window).width() * 74;
 			tempCont /= 100;
 			tempCont += 30;
 
 		$(`.content-${projectNumber}`).css('display', '');
 		$(`.content-${projectNumber}`).velocity({width: `${tempCont}px`}, 'swing', 1000, () => {
 			$('body').css('background-color', '#0f0f0f');
-		$(`.more-content-${projectNumber}`).toggle();
+			$(`.more-${projectNumber}`).toggle();
 		});
 		$('.desc').velocity({opacity: 1}, {display: ''}, 'swing', 500);
 		$('.avatar').velocity({opacity: 1}, {display: ''}, 'swing', 500);
