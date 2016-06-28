@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Rokkitt);
+
 #p1 {
 	position: absolute;
 	display: block;
@@ -147,12 +149,12 @@
 					color: #dd7c7e;
 				}
 				.overview {
-					font-size: 1em;
+					font-size: 1.2em;
 					margin-top: 5px;
 					color: #333;
 					letter-spacing: 1px;
 					margin-bottom: 20px;
-					font-family: monospace;
+					font-family: 'Rokkitt', serif;
 					.tech {
 						span {
 							img {

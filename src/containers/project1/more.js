@@ -18,9 +18,11 @@ export default class More extends React.Component {
 			comments: '/src/assets/img/p1/comments.jpg',
 		};
 
+		$('.fade').hide();
         $(e.target).addClass('img-sel');
         $(e.target).siblings().removeClass('img-sel');
 		this.setState({active: img[name]});
+		$('.fade').fadeIn(500);
     }
 
     render() {
@@ -45,7 +47,7 @@ export default class More extends React.Component {
                             <span onClick={this.handleOnClick} className="img-sel" name="article">Article View</span>
                             <span onClick={this.handleOnClick} name="comments">Comments</span>
                         </div>
-                        <img src={this.state.active}/>
+                        <img className="fade" src={this.state.active}/>
                     </div>
                 </div>
             </div>

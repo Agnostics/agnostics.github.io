@@ -2,11 +2,15 @@
 $mainColor: #303030;
 #p0 {
 	position: absolute;
-	display: block;
+	display: none;
 	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
+
+}
+.current{
+	display: block !important;
 }
 body {
 	background-color: #0f0f0f;

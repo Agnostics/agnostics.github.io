@@ -25,6 +25,7 @@ const help = {
 	},
 
 	lessInfo(projectNumber) {
+		$('html, body').animate({ scrollTop: 0 }, 'fast');
 		$(`.more-content-${projectNumber}`).css('overflow', 'hidden');
 		$(`.more-${projectNumber}`).css('z-index', -1);
 		$(`.side-${projectNumber}`).css('display', '');
