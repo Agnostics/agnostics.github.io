@@ -1,6 +1,8 @@
 import './p4.scss';
 import React from 'react';
 import help from '../../assets/helper/';
+import More from './more';
+
 
 export default class Project4 extends React.Component {
 
@@ -25,7 +27,7 @@ export default class Project4 extends React.Component {
         return (
             <div id="p4">
                 <div className="content-4"></div>
-				<div className="more-4">this is project 4!!</div>
+				<div className="more-4"><More/></div>
 					<div className="side-small-4">
 						<div className="back" onClick={() => help.lessInfo(4)}>
 							<i className="icon ion-close-round"/>

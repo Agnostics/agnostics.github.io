@@ -227,6 +227,7 @@ $mainColor: #59c6c6;
 		.site-elements {
 			display: flex;
 			justify-content: center;
+			align-items: center;
 			padding: 2% 0;
 			.element-img {
 				width: 525px;
@@ -239,7 +240,6 @@ $mainColor: #59c6c6;
 				width: 35%;
 				max-width: 35%;
 				padding-left: 5%;
-				margin-top: 100px;
 				p {
 					margin-top: -10px;
 					font-size: 1.2em;
@@ -253,6 +253,7 @@ $mainColor: #59c6c6;
 					font-size: 1.5em;
 					&:hover {
 						cursor: pointer;
+						color: $mainColor;
 					}
 				}
 				.showing {

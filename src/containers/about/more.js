@@ -17,14 +17,18 @@ export default class More extends React.Component {
                 <div className="tech">
                     <div className="title">Skills</div>
                     <div className="icons">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"/>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"/>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"/>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"/>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"/>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"/>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"/>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"/>
+						<img src="/src/assets/img/tech/angular.svg"/>
+						<img src="/src/assets/img/tech/react.svg"/>
+						<img src="/src/assets/img/tech/redux.svg"/>
+						<img src="/src/assets/img/tech/mongo.svg"/>
+						<img src="/src/assets/img/tech/node.svg"/>
+						<img src="/src/assets/img/tech/webpack.svg"/>
+						<img src="/src/assets/img/tech/grunt.svg"/>
+						<img src="/src/assets/img/tech/karma.svg"/>
+						<img src="/src/assets/img/tech/sass.svg"/>
+						<img src="/src/assets/img/tech/css.svg"/>
+						<img src="/src/assets/img/tech/html.svg"/>
+						<img src="/src/assets/img/tech/js.svg"/>
                     </div>
                 </div>
 

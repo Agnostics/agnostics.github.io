@@ -5,24 +5,22 @@ export default class More extends React.Component {
 
 	constructor() {
 		super();
-		// this.handleOnClick = this.handleOnClick.bind(this);
 		this.onMouseOver = this.onMouseOver.bind(this);
 
-		this.state = ({active: '/src/assets/img/p2/1.png'});
+		this.state = ({active: '/src/assets/img/p3/react.jpg'});
 	}
 
     onMouseOver(e) {
 		const name = e.target.getAttribute('name');
 		const img = {
-			auth: '/src/assets/img/p2/1.png',
-			live: '/src/assets/img/p2/2.png',
-			security: '/src/assets/img/p2/3.png',
+			react: '/src/assets/img/p3/react.jpg',
+			redux: '/src/assets/img/p3/redux.jpg',
+			webpack: '/src/assets/img/p3/webpack.png',
 		};
 
         $(e.target).addClass('showing');
         $(e.target).siblings().removeClass('showing');
 		this.setState({active: img[name]});
-		console.log('k');
     }
 
 
@@ -35,7 +33,7 @@ export default class More extends React.Component {
                     </div>
                     <div className="more-desc">
                         <div className="title">Objective</div>
-                        <div className="overview">Use React/Redux to create a scaling app with async data flow. Incorperate an outside API along with a social authentication. Learn basics with React and Redux flow while creating a simple app to showcase techonogly and the newest ECMAScript 6.</div>
+					<div className="overview">Use React/Redux to create a scaling app with async data flow. Incorperate an outside API along with a social authentication. Learn basics with React and Redux flow while creating a simple app to showcase techonogly and the newest ECMAScript 6. Allow for scaling and new resources while maintaining structure.</div>
 
                     </div>
                 </header>
@@ -73,7 +71,18 @@ export default class More extends React.Component {
 					</div>
 				</div>
 
-				<div className="overview"> Use React/Redux to create a scaling app with async data flow. Incorperate an outside API along with a social authentication. Learn basics with React and Redux flow while creating a simple app to showcase techonogly and the newest ECMAScript 6.
+				<div className="site-elements">
+					<div className="element-img">
+						<img className="register" src={this.state.active}/>
+					</div>
+					<div className="element-text">
+					<h1 className="showing" onClick={this.onMouseOver} name="react">React</h1>
+						<p>Using reusable components with simple UI updates allows for a quick and easy development process. Allowing the focus on more complex assignments.</p>
+					<h1 onClick={this.onMouseOver} name="redux">Redux</h1>
+						<p>Each action is recorded along with relevant data for every store update or request. Allows for debugging and redux time travel.</p>
+					<h1 onClick={this.onMouseOver} name="webpack">Webpack</h1>
+						<p>Allows for the new ECMAScript to be used alongside babel to output standard javascript. Also used to optimize project imports and compress javascript.</p>
+					</div>
 				</div>
 
 				<div className="view-links">
