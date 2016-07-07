@@ -18,7 +18,7 @@ export default class Project1 extends React.Component {
 
                 <div className="side-1" id="side">
                     <div className="desc">
-					<div className="title">PROJECT</div>
+					<div className="title">DESIGN PROJECT</div>
                         <h1>Empire Articles</h1>
                         <h3>in design</h3>
                         <p>This project is still in it's early development stages. The object was to create a place where people can post articles for various topics. The design idea was to keep things very modular and clean. Main focus was placed on the article view and text.</p>

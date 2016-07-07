@@ -69,7 +69,7 @@ export default class More extends React.Component {
 					</div>
 				</div>
 
-				<div className="site-elements">
+				{/* <div className="site-elements">
 					<div className="element-img">
 						<img className="register" src={this.state.active}/>
 					</div>
@@ -81,14 +81,14 @@ export default class More extends React.Component {
 					<h1 onClick={this.onMouseOver} name="webpack">Unique UI</h1>
 						<p>Customize your top 8 so you can get quick access to your favorite streamers without having to look at things you don't want.</p>
 					</div>
-				</div>
+				</div> */}
 
 				<div className="view-links">
 					<div>
-						<a href="https://nightlife-app-redux.herokuapp.com/" target="_blank"><button>visit site</button></a>
+						<a href="https://multishot.herokuapp.com/" target="_blank"><button>visit site</button></a>
 					</div>
 					<div>
-						<a href="https://github.com/Agnostics/nightlife-app-react" target="_blank"><button>view code</button></a>
+						<a href="https://github.com/Agnostics/Multishot-AngularJS" target="_blank"><button>view code</button></a>
 					</div>
 				</div>
             </div>

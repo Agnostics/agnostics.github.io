@@ -7,9 +7,8 @@ $mainColor: #303030;
 	right: 0;
 	top: 0;
 	bottom: 0;
-
 }
-.current{
+.current {
 	display: block !important;
 }
 body {
@@ -38,41 +37,173 @@ body {
 	z-index: -1;
 	display: none;
 	.contain-more {
-		margin: 10px;
-		.title {
-			padding-top: 5%;
-			color: #333;
-			font-size: 1.5em;
+		font-size: 14px;
+		.hero {
+			height: 400px;
+			width: 100%;
+			background-image: url("/src/assets/img/p0/top.jpg");
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-position-y: 130%;
 		}
-		.icons {
-			margin-left: -20px;
-			img {
-				width: 50px;
-				display: inline-block;
-				padding: 20px;
-				filter: invert(55%);
-				&:hover{
-					filter: invert(30%);
-					cursor: pointer;
+		header {
+			padding: 4% 5%;
+			border-radius: 5px;
+			margin: 0 auto;
+			.more-desc {
+				max-width: 840px;
+				margin: 2% auto 0;
+				border-radius: 5px;
+				.title {
+					font-size: 1.6em;
+					letter-spacing: 2px;
+					color: $mainColor;
+				}
+				.overview {
+					font-size: 1.2em;
+					margin-top: 5px;
+					color: #333;
+					letter-spacing: 1px;
+					margin-bottom: 20px;
+					font-family: 'Rokkitt', serif;
+					img{
+						filter: invert(.6);
+						width: 50px;
+					}
+				}
+				i {
+					font-size: 35px;
+					margin-right: 2%;
+					color: rgba(58, 58, 58, 0.46);
+					&:hover {
+						color: $mainColor;
+					}
+				}
+				button {
+					background-color: #3cb0b0;
+					border: none;
+					padding: 10px 20px;
+					border-radius: 25px;
+					color: white;
+					margin-top: 10px;
+					margin-left: -5px;
+					margin-right: 10px;
+					border: 2px solid white;
+					outline: none;
+					letter-spacing: 2px;
+					&:hover {
+						background-color: white;
+						border: 2px solid $mainColor;
+						color: $mainColor;
+						cursor: pointer;
+					}
+					&:active {
+						outline: none;
+					}
+				}
+			}
+			.preview {
+				width: 100%;
+				text-align: center;
+				.monitor {
+					width: 100%;
+					max-width: 840px;
+					text-align: center;
 				}
 			}
 		}
-		.text {
-			font-size: 0.7em;
-			letter-spacing: 4px;
-			color: #616161;
+		.my-code {
+			display: flex;
+			background-color: lighten($mainColor, 5%);
+			justify-content: center;
+			.find {
+				position: absolute;
+			}
+			.box {
+				width: 200px;
+				height: 200px;
+				min-width: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				a {
+					img {
+						width: 75%;
+						transition: all 0.2s ease-in-out;
+						&:hover {
+							transform: scale(1.1);
+						}
+					}
+				}
+			}
 		}
-		.info {
-			width: 50%;
-			font-size: 18px;
-			padding-left: 10%;
-			float: left;
+		.site-elements {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 2% 0;
+			.element-img {
+				width: 525px;
+				img {
+					width: 100%;
+					margin: 5%;
+				}
+			}
+			.element-text {
+				width: 35%;
+				max-width: 35%;
+				padding-left: 5%;
+				p {
+					margin-top: -10px;
+					font-size: 1.2em;
+					font-family: 'Rokkitt', serif;
+					letter-spacing: 1px;
+				}
+				h1 {
+					color: rgba(54, 54, 54, 0.33);
+					letter-spacing: 2px;
+					font-weight: 100;
+					font-size: 1.5em;
+					&:hover {
+						cursor: pointer;
+						color: $mainColor;
+					}
+				}
+				.showing {
+					color: $mainColor !important;
+				}
+			}
 		}
-		.tech {
-			float: right;
-			width: 25%;
-			margin-right: 10%;
-			max-width: 300px;
+		.view-links {
+			height: 100px;
+			background-color: #59c6c6;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			div {
+				padding: 0 2%;
+				button {
+					background: none;
+					border: none;
+					padding: 10px 30px;
+					border-radius: 40px;
+					color: white;
+					border: 2px solid white;
+					outline: none;
+					letter-spacing: 2px;
+					&:hover {
+						background-color: white;
+						border: 2px solid white;
+						color: $mainColor;
+						cursor: pointer;
+						box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.1);
+					}
+					&:active {
+						outline: none;
+					}
+				}
+			}
 		}
 	}
 }

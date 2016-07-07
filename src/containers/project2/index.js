@@ -17,7 +17,7 @@ export default class Project2 extends React.Component {
 
                 <div className="side-2" id="side">
                     <div className="desc">
-					<div className="title">PROJECT</div>
+					<div className="title">ANGULAR PROJECT</div>
                         <h1>Camp Vote</h1>
                         <h3>full-stack web</h3>
                         <p>First angular full-stack project with express backend. Fast load times and live preview of results allowing this site to be a quick and intuitive way to make polls. Register to save your polls or add an extra security feature for voters. Fully responsive, clean and fast.

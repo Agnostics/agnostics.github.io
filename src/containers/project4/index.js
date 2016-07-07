@@ -39,7 +39,7 @@ export default class Project4 extends React.Component {
 					<div className="title">PROJECT</div>
                         <h1>MultiShot</h1>
                         <h3>in development</h3>
-                        <p>First angular full-stack project with express backend. Fast load times and live preview of results allowing this site to be a quick and intuitive way to make polls. Register to save your polls or add an extra security feature for voters. Fully responsive, clean and fast.
+                        <p>Simple site powered by Angular. Dynamic data and fast load times allowing users to watch their favorite videos with ease. Easy UI for navigation, simple and to the point.
 						</p>
 						<div className="more-info" onClick={() => help.moreInfo(4)}>
 							<i className="icon ion-log-out"/>View Project

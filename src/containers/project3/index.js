@@ -18,7 +18,7 @@ export default class Project3 extends React.Component {
 
                 <div className="side-3" id="side">
                     <div className="desc">
-					<div className="title">PROJECT</div>
+					<div className="title">REACT PROJECT</div>
                         <h1>Nightlife App</h1>
                         <h3>full-stack web</h3>
                         <p>React/Redux full-stack project with express backend. Yelp API with Twitter authentication serving local bars/restaurants to the user. Allowing users to specify if they are attending a particular bar.</p>
