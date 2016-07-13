@@ -67,7 +67,7 @@ body {
 					letter-spacing: 1px;
 					margin-bottom: 20px;
 					font-family: 'Rokkitt', serif;
-					img{
+					img {
 						filter: invert(.6);
 						width: 50px;
 					}
@@ -219,6 +219,7 @@ body {
 	display: flex;
 	align-items: center;
 	font-size: 14px;
+	//transition: all 0.2s ease-in-out;
 	.avatar {
 		margin-left: 4%;
 		display: block;
@@ -300,6 +301,7 @@ body {
 	opacity: 0;
 	color: white;
 	box-shadow: 0 0 17px 0 rgba(0,0,0,0.4);
+	transition: all 0.2s ease-in-out;
 	.back {
 		padding: 20px 0.1%;
 		font-size: 32px;
@@ -314,3 +316,37 @@ body {
 		}
 	}
 }
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.side-0 {
+		width: 35%;
+	}
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.side-0 {
+		width: 40%;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 840px) {
+	.side-0 {
+		width: 50%;
+	}
+}
+@media only screen and (max-width : 570px) {
+	.side-0 {
+		width: 100%;
+	}
+	.side-small-0 {
+		width: 35px;
+	}
+	.more-0 {
+		margin-left: 35px;
+		width: calc(100% - 35px);
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {}

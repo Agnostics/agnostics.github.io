@@ -291,7 +291,6 @@ $mainColor: #3d9a7a;
 		}
 	}
 }
-
 .overview {
 	font-size: 1.2em;
 	margin-top: 5px;
@@ -299,4 +298,55 @@ $mainColor: #3d9a7a;
 	letter-spacing: 1px;
 	margin-bottom: 20px;
 	font-family: 'Rokkitt', serif;
+}
+@media only screen and (max-width : 1200px) {
+	.side-4 {
+		width: 35%;
+	}
+}
+@media only screen and (max-width : 992px) {
+	.side-4 {
+		width: 40%;
+	}
+}
+@media only screen and (max-width : 840px) {
+	.side-4 {
+		width: 50%;
+	}
+}
+@media only screen and (max-width : 570px) {
+	.side-4 {
+		width: 100%;
+	}
+	.side-small-4 {
+		width: 35px;
+	}
+	.more-4 {
+		margin-left: 35px;
+		width: calc(100% - 35px);
+		.contain-more {
+			.site-elements {
+				.element-img {
+					img {
+						display: none !important;
+					}
+				}
+				.element-text {
+					width: auto;
+					max-width: none;
+					padding-left: 0;
+					margin-left: -32%;
+				}
+			}
+			.tech-used {
+				.icons {
+					a {
+						img {
+							width: 60%;
+						}
+					}
+				}
+			}
+		}
+	}
 }

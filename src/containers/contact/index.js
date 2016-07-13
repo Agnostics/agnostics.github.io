@@ -30,15 +30,12 @@ export default class Project1 extends React.Component {
                 <div className="side-5" id="side">
                     <div className="desc">
                         <h1>Contact</h1>
-                        <h3>via email</h3>
-					<input type="text" name="name" placeholder="name..."/>
-					<input type="text" name="email" placeholder="email..."/>
-					<textarea className="message" type="text" name="message" placeholder="message..."/>
+					<h3>below</h3>
 
 					<div className="links">
-						<i className="icon ion-social-github"></i>
-						<i className="icon ion-social-codepen"></i>
-						<i className="icon ion-social-twitter"></i>
+						<a href="mailto:brandonjamespadilla@gmail.com?Subject=Hello" target="_top"><i className="icon ion-email"></i></a>
+						<a href="http://codepen.io/agnostics/#hireme" target="_blank"><i className="icon ion-social-codepen"></i></a>
+						<a href="https://twitter.com/_brandonpadilla" target="_blank"><i className="icon ion-social-twitter"></i></a>
 					</div>
                     </div>
 

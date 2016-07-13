@@ -227,3 +227,31 @@
 		}
 	}
 }
+
+@media only screen and (max-width : 1200px) {
+	.side-1 {
+		width: 35%;
+	}
+}
+@media only screen and (max-width : 992px) {
+	.side-1 {
+		width: 40%;
+	}
+}
+@media only screen and (max-width : 840px) {
+	.side-1 {
+		width: 50%;
+	}
+}
+@media only screen and (max-width : 570px) {
+	.side-1 {
+		width: 100%;
+	}
+	.side-small-1 {
+		width: 35px;
+	}
+	.more-1 {
+		margin-left: 35px;
+		width: calc(100% - 35px);
+	}
+}

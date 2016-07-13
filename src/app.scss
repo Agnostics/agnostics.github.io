@@ -1,16 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
 }
-
 .project {
-    position: fixed;
-    display: block;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: none;
+	position: fixed;
+	display: block;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: none;
 }
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {}

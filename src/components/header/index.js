@@ -23,6 +23,10 @@ export default class Header extends React.Component {
 		}
 	}
 
+	showMenu() {
+		console.log('menu pressed');
+	}
+
 	switchPage(id) {
 		switch (id) {
 			case 'nav-1':
@@ -156,7 +160,7 @@ export default class Header extends React.Component {
                         <img src="/src/components/header/logo.svg"/>
                         <div className="name">BRANDON <span className="last">PADILLA</span></div>
                     </div>
-                    <nav>
+                    <nav className="full">
                         <div className="nav-item sel" id="nav-1" onClick={this.newPage}>
                             <div className="nav-text" >about</div>
                         </div>

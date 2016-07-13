@@ -28,7 +28,7 @@
 			}
 		}
 	}
-	nav {
+	.full {
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -51,13 +51,47 @@
 			color: white;
 		}
 	}
+	.small {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		text-align: center;
+		.nav-item {
+			height: 75px;
+			padding: 0 25px;
+			display: inline-block;
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				cursor: pointer;
+			}
+			.nav-text {
+				margin-top: 25px;
+				letter-spacing: 5px;
+			}
+		}
+		.sel {
+			background-color: #303030;
+			color: white;
+		}
+	}
+	.menu-button {
+		float: right;
+		font-size: 2em;
+		margin-right: 25px;
+		margin-top: 20px;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+		}
+	}
 }
-
-#nav-1{
+#nav-1 {
 	position: relative;
 	z-index: 100;
 }
-#nav-3{
+#nav-3 {
 	position: relative;
 	z-index: 100;
 }
@@ -82,5 +116,40 @@
 	.act {
 		opacity: 1;
 		color: white;
+	}
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 570px) {
+	.nav-bar {
+		.logo {
+			display: none;
+		}
+	}
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.nav-bar {
+		.full{
+			.nav-item{
+				padding: 0 13px;
+			}
+		}
+	}
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 360px) {
+
+	.nav-bar {
+		.full{
+			.nav-item{
+				padding: 0 8px;
+			}
+		}
 	}
 }
