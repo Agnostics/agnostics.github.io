@@ -346,8 +346,7 @@ body {
 		display: none !important;
 	}
 }
-@media only screen and (max-width : 480px) {}
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 480px) {
 	.side-0 {
 		.avatar {
 			display: none;
@@ -362,4 +361,7 @@ body {
 			}
 		}
 	}
+}
+@media only screen and (max-width : 320px) {
+
 }
