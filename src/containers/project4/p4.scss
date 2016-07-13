@@ -349,4 +349,23 @@ $mainColor: #3d9a7a;
 			}
 		}
 	}
+	.content-4 {
+		display: none !important;
+	}
+}
+@media only screen and (max-width : 320px) {
+	.side-4 {
+		.avatar {
+			display: none;
+		}
+		font-size: 12px;
+		.button-panel {
+			height: 55px;
+			.button-arrow {
+				i {
+					font-size: 20px;
+				}
+			}
+		}
+	}
 }

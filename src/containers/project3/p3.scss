@@ -317,6 +317,11 @@ $mainColor: #a872b5;
 @media only screen and (max-width : 570px) {
 	.side-3 {
 		width: 100%;
+		.desc{
+			h1{
+				letter-spacing: 4px;
+			}
+		}
 	}
 	.side-small-3 {
 		width: 35px;
@@ -343,6 +348,54 @@ $mainColor: #a872b5;
 					a {
 						img {
 							width: 60%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.content-3 {
+		display: none !important;
+	}
+}
+@media only screen and (max-width : 320px) {
+	.side-3 {
+		.avatar {
+			display: none;
+		}
+		font-size: 12px;
+		.button-panel {
+			height: 55px;
+			.button-arrow {
+				i {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	.more-3 {
+		margin-left: 35px;
+		width: calc(100% - 35px);
+		.contain-more {
+			.site-elements {
+				.element-img {
+					img {
+						display: none !important;
+					}
+				}
+				.element-text {
+					width: auto;
+					max-width: none;
+					padding-left: 0;
+					margin-left: -32%;
+				}
+			}
+			.tech-used {
+				.icons {
+					a {
+						img {
+							width: 35%;
 						}
 					}
 				}

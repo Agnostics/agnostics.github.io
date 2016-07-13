@@ -180,3 +180,19 @@ iframe {
 		display: none;
 	}
 }
+@media only screen and (max-width : 320px) {
+	.side-5 {
+		.avatar {
+			display: none;
+		}
+		font-size: 12px;
+		.button-panel {
+			height: 55px;
+			.button-arrow {
+				i {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}

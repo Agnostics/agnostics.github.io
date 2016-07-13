@@ -246,6 +246,11 @@
 @media only screen and (max-width : 570px) {
 	.side-1 {
 		width: 100%;
+		.desc{
+			h1{
+				letter-spacing: 4px;
+			}
+		}
 	}
 	.side-small-1 {
 		width: 35px;
@@ -253,5 +258,24 @@
 	.more-1 {
 		margin-left: 35px;
 		width: calc(100% - 35px);
+	}
+	.content-1 {
+		display: none !important;
+	}
+}
+@media only screen and (max-width : 320px) {
+	.side-1 {
+		.avatar {
+			display: none;
+		}
+		font-size: 12px;
+		.button-panel {
+			height: 55px;
+			.button-arrow {
+				i {
+					font-size: 20px;
+				}
+			}
+		}
 	}
 }

@@ -20,7 +20,7 @@ export default class Project1 extends React.Component {
                     <div className="desc">
 					<div className="title">DESIGN PROJECT</div>
                         <h1>Empire Articles</h1>
-                        <h3>in design</h3>
+                        <h3>mock up</h3>
                         <p>This project is still in it's early development stages. The object was to create a place where people can post articles for various topics. The design idea was to keep things very modular and clean. Main focus was placed on the article view and text.</p>
                         <div className="more-info-1" onClick={() => help.moreInfo(1)}>
                             <i className="icon ion-log-out"/>View Project

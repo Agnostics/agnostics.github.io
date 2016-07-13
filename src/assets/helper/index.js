@@ -61,6 +61,7 @@ const help = {
 	},
 
 	up(next, prev, color, toNav, act) {
+		console.log('pressedup');
 		this.clearSel();
 		next.css('display', 'block');
 		next.addClass('current');

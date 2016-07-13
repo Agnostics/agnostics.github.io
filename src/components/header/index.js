@@ -10,8 +10,13 @@ export default class Header extends React.Component {
     }
 
 	newPage(ele) {
-		helper.clearSel();
 		const id = ele.currentTarget.id;
+
+		if (helper.currentPage().slice(1) === id.charAt(id.length - 1)) {
+			return;
+		}
+
+		helper.clearSel();
 		const projectNumber = helper.currentPage().slice(-1);
 		if ($(`.content-${projectNumber}`).width() === 0) {
 			helper.lessInfo(projectNumber);
@@ -23,11 +28,10 @@ export default class Header extends React.Component {
 		}
 	}
 
-	showMenu() {
-		console.log('menu pressed');
-	}
-
 	switchPage(id) {
+		if (helper.currentPage().slice(1) === id.charAt(id.length - 1)) {
+			return;
+		}
 		switch (id) {
 			case 'nav-1':
 				$('#nav-1').toggleClass('sel');
@@ -41,7 +45,6 @@ export default class Header extends React.Component {
 						$(`#${helper.currentPage()}`).removeClass('current');
 				} else {
 				$('#p0').toggle('blind', {direction: 'down'}, 1000, () => {
-					console.log(helper.currentPage());
 					$(`#${helper.currentPage()}`).css('display', 'none');
 					$(`#${helper.currentPage()}`).removeClass('current');
 					$('#p0').addClass('current');
@@ -101,7 +104,6 @@ export default class Header extends React.Component {
 						$(`#${helper.currentPage()}`).removeClass('current');
 				} else {
 				$('#p3').toggle('blind', {direction: 'down'}, 1000, () => {
-					console.log(helper.currentPage());
 					$(`#${helper.currentPage()}`).css('display', 'none');
 					$(`#${helper.currentPage()}`).removeClass('current');
 					$('#p3').addClass('current');
