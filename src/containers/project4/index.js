@@ -36,10 +36,10 @@ export default class Project4 extends React.Component {
 
                 <div className="side-4" id="side">
                     <div className="desc">
-					<div className="title">PROJECT</div>
-                        <h1>MultiShot</h1>
-                        <h3>in development</h3>
-                        <p>Simple site powered by Angular. Dynamic data and fast load times allowing users to watch their favorite videos with ease. Easy UI for navigation, simple and to the point.
+					<div className="title">BACKEND SHOWCASE</div>
+                        <h1>Microservices</h1>
+                        <h3>fully responsive</h3>
+                        <p>Simple site powered by Express. Showcasing backend skills with routes, dynamic data, and user processing data. No frameworks, just pure JavaScript with a responsive design.
 						</p>
 						<div className="more-info" onClick={() => help.moreInfo(4)}>
 							<i className="icon ion-log-out"/>View Project
